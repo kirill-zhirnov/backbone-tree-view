@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/bootstrap-theme.css" rel="stylesheet">
+
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../node_modules/underscore/underscore-min.js"></script>
+        <script src="../node_modules/backbone/backbone.js"></script>
+        <script src="../node_modules/backbone-tree-model/src/backbone.treemodel.js"></script>
+        <script src="../lib/backbone-tree-view.js"></script>
+
+        <title>Backbone-tree-view</title>
+        <style type="text/css">
+            #content {
+                padding: 0 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3" id="content">
+                    <h1>Tree</h1>
+                    <div id="tree"></div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var data = [
+                {
+                    id:7,
+                    title:'No children'
+                },
+                {
+                    id:1,
+                    title:'Australia',
+                    open : false,
+                    nodes: [
+                        {
+                            id: 2,
+                            title : 'Sydney'
+                        }
+                    ]
+                },
+                {
+                    id:3,
+                    title:'Russia',
+                    open : false,
+                    nodes: [
+                        {
+                            id:4,
+                            title : 'Moscow',
+                            nodes : [
+                                {
+                                    id: '41',
+                                    title: 'Moscow - 1'
+                                },
+                                {
+                                    id: '42',
+                                    title: 'Moscow - 2'
+                                }
+                            ]
+                        },
+                        {title: 'aaaa1'},
+                        {title: 'aaaa2'},
+                        {title: 'aaaa3'},
+                        {title: 'aaaa4'},
+                        {title: 'aaaa5'},
+                        {title: 'aaaa6'},
+                        {title: 'aaaa7'},
+                        {title: 'aaaa8'},
+                        {title: 'aaaa9'},
+                        {title: 'aaaa10'},
+                        {title: 'aaaa11'},
+                        {title: 'aaaa12'},
+                        {title: 'aaaa13'},
+                        {title: 'aaaa14'},
+                        {title: 'aaaa15'},
+                        {title: 'aaaa16'},
+                        {title: 'aaaa17'}
+                    ]
+                },
+                {
+                    id:5,
+                    title:'USA',
+                    nodes: [
+                        {
+                            id:6,
+                            title : 'Washington'
+                        }
+                    ]
+                },
+            ];
+
+            var list = new BackTree.Tree({
+                collection : data,
+                settings : {
+                    checkbox : true,
+                    plugins : {
+                        DnD: {
+//                          changeParent : false
+                        }
+                    }
+                }
+            });
+            $('#tree').append(list.render().$el);
+
+        </script>
+    </body>
+</html>

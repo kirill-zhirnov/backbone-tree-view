@@ -1,0 +1,142 @@
+@import "variables.less";
+@import (reference) "mixins/buttons.less";
+@import (reference) "mixins/vendor-prefixes.less";
+@import (reference) "glyphicons.less";
+
+@padding-item: 10px;
+@wrapper-bg: #f7f7f9;
+@wrapper-bg-hover: darken(@wrapper-bg, 3%);
+@overlapped-bg: lighten(@brand-success, 40%);
+
+.bt-bootstrap {
+	ul {
+		padding : 0;
+		margin: 0;
+	}
+
+	&.dnd {
+		.wrapper {
+			cursor: move;
+
+			.no-dnd {
+				cursor: default;
+			}
+		}
+	}
+}
+
+.bt-item {
+	padding : 0;
+	margin: 0;
+	list-style: none;
+
+	>.wrapper {
+		border: 1px solid @list-group-border;
+		background: @wrapper-bg;
+
+		&:hover {
+			background: @wrapper-bg-hover;
+		}
+
+		.left-part {
+			display: inline-block;
+			padding: @padding-item;
+
+			.toggle {
+				.button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
+				.button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+
+				display: none;
+
+				span {
+					&:extend(.glyphicon);
+					&:before {
+						content: "\e259";
+					}
+				}
+			}
+
+			input {
+				margin-right: @padding-item / 2;
+			}
+		}
+
+		.body-part {
+			display: inline-block;
+			padding-top: @padding-item;
+			padding-bottom: @padding-item;
+		}
+
+		.right-part {
+			float: right;
+			padding: @padding-item;
+
+			&:empty {
+				display: none;
+			}
+		}
+	}
+
+	>ul {
+		margin-top: @padding-small-vertical;
+		display: none;
+		padding-left: 30px;
+	}
+
+	&.placeholder {
+		border: 3px dashed @brand-warning;
+		box-sizing: border-box;
+		background: @overlapped-bg;
+	}
+
+	&.bt-is-dragged {
+		position: absolute;
+		z-index: 1000;
+	}
+
+	+ .bt-item {
+		margin-top: @padding-small-vertical;
+	}
+
+	&.has-child {
+		>.wrapper {
+			.toggle {
+				display: inline-block;
+
+				.button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
+				span {
+					&:before {
+						content: "\e258";
+					}
+				}
+			}
+		}
+	}
+
+	&.open {
+		>.wrapper {
+			.toggle {
+				display: inline-block;
+				span {
+					&:before {
+						content: "\e259";
+					}
+				}
+			}
+		}
+	}
+
+	&.overlapped {
+		>.wrapper {
+			background: @overlapped-bg;
+		}
+	}
+}
+
+.bt-is-dragged {
+	position: absolute;
+	z-index: 1000;
+	cursor: move;
+	background: @wrapper-bg-hover;
+	.rotate(2deg);
+}

@@ -1,0 +1,190 @@
+.bt-item > .wrapper .left-part .toggle span {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.bt-bootstrap ul {
+  padding: 0;
+  margin: 0;
+}
+.bt-bootstrap.dnd .wrapper {
+  cursor: move;
+}
+.bt-bootstrap.dnd .wrapper .no-dnd {
+  cursor: default;
+}
+.bt-item {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.bt-item > .wrapper {
+  border: 1px solid #dddddd;
+  background: #f7f7f9;
+}
+.bt-item > .wrapper:hover {
+  background: #eeeef2;
+}
+.bt-item > .wrapper .left-part {
+  display: inline-block;
+  padding: 10px;
+}
+.bt-item > .wrapper .left-part .toggle {
+  color: #333333;
+  background-color: #ffffff;
+  border-color: #cccccc;
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+  display: none;
+}
+.bt-item > .wrapper .left-part .toggle:hover,
+.bt-item > .wrapper .left-part .toggle:focus,
+.bt-item > .wrapper .left-part .toggle.focus,
+.bt-item > .wrapper .left-part .toggle:active,
+.bt-item > .wrapper .left-part .toggle.active,
+.open > .dropdown-toggle.bt-item > .wrapper .left-part .toggle {
+  color: #333333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.bt-item > .wrapper .left-part .toggle:active,
+.bt-item > .wrapper .left-part .toggle.active,
+.open > .dropdown-toggle.bt-item > .wrapper .left-part .toggle {
+  background-image: none;
+}
+.bt-item > .wrapper .left-part .toggle.disabled,
+.bt-item > .wrapper .left-part .toggle[disabled],
+fieldset[disabled] .bt-item > .wrapper .left-part .toggle,
+.bt-item > .wrapper .left-part .toggle.disabled:hover,
+.bt-item > .wrapper .left-part .toggle[disabled]:hover,
+fieldset[disabled] .bt-item > .wrapper .left-part .toggle:hover,
+.bt-item > .wrapper .left-part .toggle.disabled:focus,
+.bt-item > .wrapper .left-part .toggle[disabled]:focus,
+fieldset[disabled] .bt-item > .wrapper .left-part .toggle:focus,
+.bt-item > .wrapper .left-part .toggle.disabled.focus,
+.bt-item > .wrapper .left-part .toggle[disabled].focus,
+fieldset[disabled] .bt-item > .wrapper .left-part .toggle.focus,
+.bt-item > .wrapper .left-part .toggle.disabled:active,
+.bt-item > .wrapper .left-part .toggle[disabled]:active,
+fieldset[disabled] .bt-item > .wrapper .left-part .toggle:active,
+.bt-item > .wrapper .left-part .toggle.disabled.active,
+.bt-item > .wrapper .left-part .toggle[disabled].active,
+fieldset[disabled] .bt-item > .wrapper .left-part .toggle.active {
+  background-color: #ffffff;
+  border-color: #cccccc;
+}
+.bt-item > .wrapper .left-part .toggle .badge {
+  color: #ffffff;
+  background-color: #333333;
+}
+.bt-item > .wrapper .left-part .toggle span:before {
+  content: "\e259";
+}
+.bt-item > .wrapper .left-part input {
+  margin-right: 5px;
+}
+.bt-item > .wrapper .body-part {
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.bt-item > .wrapper .right-part {
+  float: right;
+  padding: 10px;
+}
+.bt-item > .wrapper .right-part:empty {
+  display: none;
+}
+.bt-item > ul {
+  margin-top: 5px;
+  display: none;
+  padding-left: 30px;
+}
+.bt-item.placeholder {
+  border: 3px dashed #f0ad4e;
+  box-sizing: border-box;
+  background: #eaf6ea;
+}
+.bt-item.bt-is-dragged {
+  position: absolute;
+  z-index: 1000;
+}
+.bt-item + .bt-item {
+  margin-top: 5px;
+}
+.bt-item.has-child > .wrapper .toggle {
+  display: inline-block;
+  color: #ffffff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+.bt-item.has-child > .wrapper .toggle:hover,
+.bt-item.has-child > .wrapper .toggle:focus,
+.bt-item.has-child > .wrapper .toggle.focus,
+.bt-item.has-child > .wrapper .toggle:active,
+.bt-item.has-child > .wrapper .toggle.active,
+.open > .dropdown-toggle.bt-item.has-child > .wrapper .toggle {
+  color: #ffffff;
+  background-color: #449d44;
+  border-color: #398439;
+}
+.bt-item.has-child > .wrapper .toggle:active,
+.bt-item.has-child > .wrapper .toggle.active,
+.open > .dropdown-toggle.bt-item.has-child > .wrapper .toggle {
+  background-image: none;
+}
+.bt-item.has-child > .wrapper .toggle.disabled,
+.bt-item.has-child > .wrapper .toggle[disabled],
+fieldset[disabled] .bt-item.has-child > .wrapper .toggle,
+.bt-item.has-child > .wrapper .toggle.disabled:hover,
+.bt-item.has-child > .wrapper .toggle[disabled]:hover,
+fieldset[disabled] .bt-item.has-child > .wrapper .toggle:hover,
+.bt-item.has-child > .wrapper .toggle.disabled:focus,
+.bt-item.has-child > .wrapper .toggle[disabled]:focus,
+fieldset[disabled] .bt-item.has-child > .wrapper .toggle:focus,
+.bt-item.has-child > .wrapper .toggle.disabled.focus,
+.bt-item.has-child > .wrapper .toggle[disabled].focus,
+fieldset[disabled] .bt-item.has-child > .wrapper .toggle.focus,
+.bt-item.has-child > .wrapper .toggle.disabled:active,
+.bt-item.has-child > .wrapper .toggle[disabled]:active,
+fieldset[disabled] .bt-item.has-child > .wrapper .toggle:active,
+.bt-item.has-child > .wrapper .toggle.disabled.active,
+.bt-item.has-child > .wrapper .toggle[disabled].active,
+fieldset[disabled] .bt-item.has-child > .wrapper .toggle.active {
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+.bt-item.has-child > .wrapper .toggle .badge {
+  color: #5cb85c;
+  background-color: #ffffff;
+}
+.bt-item.has-child > .wrapper .toggle span:before {
+  content: "\e258";
+}
+.bt-item.open > .wrapper .toggle {
+  display: inline-block;
+}
+.bt-item.open > .wrapper .toggle span:before {
+  content: "\e259";
+}
+.bt-item.overlapped > .wrapper {
+  background: #eaf6ea;
+}
+.bt-is-dragged {
+  position: absolute;
+  z-index: 1000;
+  cursor: move;
+  background: #eeeef2;
+  -webkit-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
