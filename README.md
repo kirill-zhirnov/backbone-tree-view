@@ -8,8 +8,8 @@ Demo
 How to install?
 ---------------
 
-1. `npm install backbone-tree-view`
-2. Add scripts and styles inside <head> tag:
+* `npm install backbone-tree-view`
+* Add scripts and styles inside <head> tag:
 
 ```html
         <!--Dependencies: -->
@@ -24,7 +24,7 @@ How to install?
         <script src="./node_modules/backbone-tree-view/lib/backbone-tree-view.js"></script>
 ```
 
-3. Add container inside <body>:
+* Add container inside <body>:
 
 ```html
 <body>
@@ -32,7 +32,7 @@ How to install?
 </body>
 ```
 
-4. Prepare array for collection:
+* Prepare array for collection:
 
 ```javascript
 	var data = [
@@ -76,7 +76,7 @@ Or you can create collection:
     ]);
 ```
 
-5. Create tree:
+* Create tree:
 
 ```javascript
 	var tree = new BackTree.Tree({
@@ -84,7 +84,7 @@ Or you can create collection:
 	});
 ```
 
-6. Render and append:
+* Render and append:
 
 ```javascript
 	$('#tree').append(tree.render().$el);
