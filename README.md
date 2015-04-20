@@ -114,7 +114,7 @@ Data structure:
 	];
 ```
 
-###Possible keys:
+### Possible keys:
 
 - nodes - (Array) - Array with children.
 
@@ -136,7 +136,7 @@ Drag and drop
 	});
 ```
 
-###Possible options:
+### Possible options:
 
 - changeParent - (boolean) - if false only sorting will be available.
 
