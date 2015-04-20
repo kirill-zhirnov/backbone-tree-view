@@ -11,13 +11,15 @@ class BackTree.Item extends BackTree.View
 
 		@$el.data 'view', @
 
-	events :
-		"click > .wrapper .toggle" : "onToggleClick"
-		"mousedown > .wrapper" : "onMouseDown"
-		"touchstart > .wrapper" : "onTouchStart"
-		'click > .wrapper input[name="checkbox"]' : "onCheckboxClicked"
-		"dragstart" : (e) ->
-			e.preventDefault()
+	events : ->
+		return {
+			"click > .wrapper .toggle": "onToggleClick"
+			"mousedown > .wrapper": "onMouseDown"
+			"touchstart > .wrapper": "onTouchStart"
+			'click > .wrapper input[name="checkbox"]': "onCheckboxClicked"
+			"dragstart": (e) ->
+				e.preventDefault()
+		}
 
 	render : ->
 		@$el.html @getTpl()
