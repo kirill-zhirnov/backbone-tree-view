@@ -1,8 +1,8 @@
 {
   "name": "backbone-tree-view",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Backbone.View component which provide interactive tree.",
-  "main": "lib/backtree.js",
+  "main": "lib/backbone-tree-view.js",
   "dependencies": {
     "backbone": "^1.1.2",
     "backbone-tree-model": "^1.0.1",

@@ -36,12 +36,12 @@ module.exports = function (grunt) {
                 banner: '(function (root, factory) {\n\n' +
                 '  if (typeof define === "function" && define.amd) {\n' +
                 '    // AMD (+ global for extensions)\n' +
-                '    define(["underscore", "backbone"], function (_, Backbone) {\n' +
+                '    define(["underscore", "backbone", "backbone-tree-model"], function (_, Backbone) {\n' +
                 '      return (root.BackTree = factory(_, Backbone));\n' +
                 '    });\n' +
                 '  } else if (typeof exports === "object") {\n' +
                 '    // CommonJS\n' +
-                '    module.exports = factory(require("underscore"), require("backbone"));\n' +
+                '    module.exports = factory(require("underscore"), require("backbone"), require("backbone-tree-model"));\n' +
                 '  } else {\n' +
                 '    // Browser\n' +
                 '    root.BackTree = factory(root._, root.Backbone);\n' +
