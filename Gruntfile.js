@@ -82,13 +82,20 @@ module.exports = function (grunt) {
                     'css/bootstrap-theme.css' : 'less/bootstrap-theme.less'
                 }
             }
+        },
+        cssmin : {
+            options : {},
+            target: {
+                files: {
+                    'css/bootstrap-theme.min.css': ['css/bootstrap-theme.css']
+                }
+            }
         }
     });
 
     require('load-grunt-tasks')(grunt, {scope: 'devDependencies'})
 
-
     grunt.registerTask('js', ['clean:js', 'coffee', 'concat', 'uglify']);
-    grunt.registerTask('css', ['clean:css', 'less']);
+    grunt.registerTask('css', ['clean:css', 'less', 'cssmin']);
     grunt.registerTask('default', ['js', 'css']);
 };
