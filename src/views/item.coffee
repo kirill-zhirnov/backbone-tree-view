@@ -122,6 +122,7 @@ class BackTree.Item extends BackTree.View
 	onCheckboxClicked : (e) ->
 		$checkbox = @$el.find('input[name="checkbox"]')
 		@model.set 'checked', $checkbox.prop('checked')
+		@model.root().trigger 'checkboxChanged', e, @
 
 	onUserButtonClicked : (e) ->
 		@model.root().trigger 'userButtonClicked', e, @
