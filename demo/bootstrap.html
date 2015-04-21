@@ -97,6 +97,19 @@
                 },
             ];
 
+            data = new BackTree.Collection(data);
+            data.on('userButtonClicked', function(e, view) {
+                e.preventDefault();
+
+                console.log(view.model);
+            });
+
+            var ItemConstructor = BackTree.Item.extend({
+                getRightPart : function() {
+                    return '<a href="#" class="btn btn-danger btn-xs">X</a>'
+                }
+            });
+
             var list = new BackTree.Tree({
                 collection : data,
                 settings : {
@@ -105,7 +118,9 @@
                         DnD: {
 //                          changeParent : false
                         }
-                    }
+                    },
+
+                    ItemConstructor : ItemConstructor
                 }
             });
             $('#tree').append(list.render().$el);

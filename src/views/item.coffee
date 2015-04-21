@@ -19,6 +19,7 @@ class BackTree.Item extends BackTree.View
 			'click > .wrapper input[name="checkbox"]': "onCheckboxClicked"
 			"dragstart": (e) ->
 				e.preventDefault()
+			"click > .wrapper .right-part .btn" : "onUserButtonClicked"
 		}
 
 	render : ->
@@ -121,6 +122,9 @@ class BackTree.Item extends BackTree.View
 	onCheckboxClicked : (e) ->
 		$checkbox = @$el.find('input[name="checkbox"]')
 		@model.set 'checked', $checkbox.prop('checked')
+
+	onUserButtonClicked : (e) ->
+		@model.root().trigger 'userButtonClicked', e, @
 
 	remove : ->
 		@$el.data 'view', null
