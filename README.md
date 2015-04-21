@@ -9,7 +9,7 @@ How to install?
 ---------------
 
 * `npm install backbone-tree-view`
-* Add scripts and styles inside <head> tag:
+* Add scripts and styles inside HEAD tag:
 
 ```html
         <!--Dependencies: -->
@@ -24,7 +24,7 @@ How to install?
         <script src="./node_modules/backbone-tree-view/lib/backbone-tree-view.js"></script>
 ```
 
-* Add container inside <body>:
+* Add container inside BODY:
 
 ```html
 <body>

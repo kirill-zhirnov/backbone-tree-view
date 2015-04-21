@@ -2,11 +2,14 @@ class BackTree.List extends BackTree.View
 	tagName : 'ul'
 
 	initialize : ->
-		@children = {}
+		@initItemsView()
 
 		@listenTo @collection, 'remove', @onModelRemove
 		@listenTo @collection, 'add', @onModelAdd
+		@listenTo @collection, 'reset', @onCollectionReset
 
+	initItemsView : ->
+		@children = {}
 		@collection.forEach (model) =>
 			@children[model.cid] = @settings.makeItem {
 				model : model
@@ -53,6 +56,13 @@ class BackTree.List extends BackTree.View
 			child.$el.insertAfter $prev
 
 		@children[model.cid] = child
+
+	onCollectionReset : ->
+		_.each @children, (child, key) =>
+			child.remove()
+
+		@initItemsView()
+		@render()
 
 	remove : ->
 		_.each @children, (child, key) ->
