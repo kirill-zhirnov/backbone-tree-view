@@ -352,10 +352,11 @@ class BackTree.plugins.DnD extends BackTree.plugins.Basic
 			@$overlapped.addClass 'overlapped'
 
 	saveModelPosition : ->
+		model = @view.model
 		result = @setModelPosition @view.model, @getModelPosition()
 
 		if result
-			@collection.trigger 'dndStructureChanged', @view.model, result.oldPosition, result.newPosition
+			@collection.trigger 'dndStructureChanged', model, result.oldPosition, result.newPosition
 
 	setModelPosition : (model, newPosition) ->
 		oldPosition =

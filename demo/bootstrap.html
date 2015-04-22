@@ -103,6 +103,9 @@
 
                 console.log(view.model);
             });
+            data.on('dndStructureChanged', function() {
+                console.log(arguments);
+            });
 
             var ItemConstructor = BackTree.Item.extend({
                 getRightPart : function() {
@@ -116,7 +119,7 @@
                     checkbox : true,
                     plugins : {
                         DnD: {
-//                          changeParent : false
+                            changeParent : false
                         }
                     },
 
