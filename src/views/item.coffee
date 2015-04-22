@@ -51,10 +51,13 @@ class BackTree.Item extends BackTree.View
 			<span></span>
 		</a>
 	</div>
-	<div class="body-part">#{@model.getTitle()}</div>
+	<div class="body-part">#{@getBodyPart()}</div>
 	<div class="right-part no-dnd">#{@getRightPart()}</div>
 </div>
 """
+
+	getBodyPart : () ->
+		return @model.getTitle()
 
 	getRightPart : () ->
 		return ''
