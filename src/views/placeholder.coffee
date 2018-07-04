@@ -19,7 +19,7 @@ class BackTree.Placeholder extends BackTree.View
 
 	replace : (from, to) ->
 		prev = from.prev()
-		if prev.size() > 0
+		if prev.length > 0
 			to.insertAfter prev
 		else
 			from.parent().prepend to

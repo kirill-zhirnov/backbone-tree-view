@@ -50,7 +50,7 @@ class BackTree.List extends BackTree.View
 		else
 			$prev = @$("> .bt-item:eq(#{index - 1})")
 
-			if !$prev.size()
+			if !$prev.length
 				throw new Error "Previous el not found!"
 
 			child.$el.insertAfter $prev

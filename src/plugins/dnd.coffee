@@ -238,7 +238,7 @@ class BackTree.plugins.DnD extends BackTree.plugins.Basic
 		if !@doesElHaveView($el)
 			$el = $el.parents('.bt-item:eq(0)')
 
-			if $el.size() != 1 || !@doesElHaveView($el)
+			if $el.length != 1 || !@doesElHaveView($el)
 				$el = false
 
 		return $el
@@ -263,7 +263,7 @@ class BackTree.plugins.DnD extends BackTree.plugins.Basic
 	shallLevelDown : (coefficient) ->
 		$prev = @$overlapped.prev('.bt-item:eq(0)')
 
-		if $prev.size() && @doesElHaveView($prev) && coefficient.leftMargin > 30
+		if $prev.length && @doesElHaveView($prev) && coefficient.leftMargin > 30
 			view = $prev.data 'view'
 
 			if (view.model.hasChildren() && view.model.get('open')) ||  !view.model.hasChildren()
@@ -279,10 +279,10 @@ class BackTree.plugins.DnD extends BackTree.plugins.Basic
 		if coefficient.leftMargin < -30
 			$parent = @$overlapped.parents('.bt-item:eq(0)')
 
-			if $parent.size() && @doesElHaveView($parent)
+			if $parent.length && @doesElHaveView($parent)
 				$children = $parent.find('> ul > .bt-item')
 
-				if $children.size() > 0 && $children.index(@$overlapped) == ($children.size() - 1)
+				if $children.length > 0 && $children.index(@$overlapped) == ($children.length - 1)
 					return $parent
 
 		return false
@@ -393,7 +393,7 @@ class BackTree.plugins.DnD extends BackTree.plugins.Basic
 
 	getModelPosition : ->
 		$parent = @view.$el.parents('.bt-item:eq(0)')
-		if !$parent.size()
+		if !$parent.length
 			$parent = false
 
 		position =

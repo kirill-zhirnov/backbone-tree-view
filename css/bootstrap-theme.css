@@ -25,7 +25,7 @@
   list-style: none;
 }
 .bt-item > .wrapper {
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   background: #f7f7f9;
 }
 .bt-item > .wrapper:hover {
@@ -36,33 +36,51 @@
   padding: 10px;
 }
 .bt-item > .wrapper .left-part .toggle {
-  color: #333333;
-  background-color: #ffffff;
-  border-color: #cccccc;
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 3px;
   display: none;
 }
-.bt-item > .wrapper .left-part .toggle:hover,
 .bt-item > .wrapper .left-part .toggle:focus,
-.bt-item > .wrapper .left-part .toggle.focus,
-.bt-item > .wrapper .left-part .toggle:active,
-.bt-item > .wrapper .left-part .toggle.active,
-.open > .dropdown-toggle.bt-item > .wrapper .left-part .toggle {
-  color: #333333;
+.bt-item > .wrapper .left-part .toggle.focus {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #8c8c8c;
+}
+.bt-item > .wrapper .left-part .toggle:hover {
+  color: #333;
   background-color: #e6e6e6;
   border-color: #adadad;
 }
 .bt-item > .wrapper .left-part .toggle:active,
 .bt-item > .wrapper .left-part .toggle.active,
 .open > .dropdown-toggle.bt-item > .wrapper .left-part .toggle {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.bt-item > .wrapper .left-part .toggle:active:hover,
+.bt-item > .wrapper .left-part .toggle.active:hover,
+.open > .dropdown-toggle.bt-item > .wrapper .left-part .toggle:hover,
+.bt-item > .wrapper .left-part .toggle:active:focus,
+.bt-item > .wrapper .left-part .toggle.active:focus,
+.open > .dropdown-toggle.bt-item > .wrapper .left-part .toggle:focus,
+.bt-item > .wrapper .left-part .toggle:active.focus,
+.bt-item > .wrapper .left-part .toggle.active.focus,
+.open > .dropdown-toggle.bt-item > .wrapper .left-part .toggle.focus {
+  color: #333;
+  background-color: #d4d4d4;
+  border-color: #8c8c8c;
+}
+.bt-item > .wrapper .left-part .toggle:active,
+.bt-item > .wrapper .left-part .toggle.active,
+.open > .dropdown-toggle.bt-item > .wrapper .left-part .toggle {
   background-image: none;
 }
-.bt-item > .wrapper .left-part .toggle.disabled,
-.bt-item > .wrapper .left-part .toggle[disabled],
-fieldset[disabled] .bt-item > .wrapper .left-part .toggle,
 .bt-item > .wrapper .left-part .toggle.disabled:hover,
 .bt-item > .wrapper .left-part .toggle[disabled]:hover,
 fieldset[disabled] .bt-item > .wrapper .left-part .toggle:hover,
@@ -71,19 +89,13 @@ fieldset[disabled] .bt-item > .wrapper .left-part .toggle:hover,
 fieldset[disabled] .bt-item > .wrapper .left-part .toggle:focus,
 .bt-item > .wrapper .left-part .toggle.disabled.focus,
 .bt-item > .wrapper .left-part .toggle[disabled].focus,
-fieldset[disabled] .bt-item > .wrapper .left-part .toggle.focus,
-.bt-item > .wrapper .left-part .toggle.disabled:active,
-.bt-item > .wrapper .left-part .toggle[disabled]:active,
-fieldset[disabled] .bt-item > .wrapper .left-part .toggle:active,
-.bt-item > .wrapper .left-part .toggle.disabled.active,
-.bt-item > .wrapper .left-part .toggle[disabled].active,
-fieldset[disabled] .bt-item > .wrapper .left-part .toggle.active {
-  background-color: #ffffff;
-  border-color: #cccccc;
+fieldset[disabled] .bt-item > .wrapper .left-part .toggle.focus {
+  background-color: #fff;
+  border-color: #ccc;
 }
 .bt-item > .wrapper .left-part .toggle .badge {
-  color: #ffffff;
-  background-color: #333333;
+  color: #fff;
+  background-color: #333;
 }
 .bt-item > .wrapper .left-part .toggle span:before {
   content: "\e259";
@@ -122,28 +134,46 @@ fieldset[disabled] .bt-item > .wrapper .left-part .toggle.active {
 }
 .bt-item.has-child > .wrapper .toggle {
   display: inline-block;
-  color: #ffffff;
+  color: #fff;
   background-color: #5cb85c;
   border-color: #4cae4c;
 }
-.bt-item.has-child > .wrapper .toggle:hover,
 .bt-item.has-child > .wrapper .toggle:focus,
-.bt-item.has-child > .wrapper .toggle.focus,
-.bt-item.has-child > .wrapper .toggle:active,
-.bt-item.has-child > .wrapper .toggle.active,
-.open > .dropdown-toggle.bt-item.has-child > .wrapper .toggle {
-  color: #ffffff;
+.bt-item.has-child > .wrapper .toggle.focus {
+  color: #fff;
+  background-color: #449d44;
+  border-color: #255625;
+}
+.bt-item.has-child > .wrapper .toggle:hover {
+  color: #fff;
   background-color: #449d44;
   border-color: #398439;
 }
 .bt-item.has-child > .wrapper .toggle:active,
 .bt-item.has-child > .wrapper .toggle.active,
 .open > .dropdown-toggle.bt-item.has-child > .wrapper .toggle {
+  color: #fff;
+  background-color: #449d44;
+  border-color: #398439;
+}
+.bt-item.has-child > .wrapper .toggle:active:hover,
+.bt-item.has-child > .wrapper .toggle.active:hover,
+.open > .dropdown-toggle.bt-item.has-child > .wrapper .toggle:hover,
+.bt-item.has-child > .wrapper .toggle:active:focus,
+.bt-item.has-child > .wrapper .toggle.active:focus,
+.open > .dropdown-toggle.bt-item.has-child > .wrapper .toggle:focus,
+.bt-item.has-child > .wrapper .toggle:active.focus,
+.bt-item.has-child > .wrapper .toggle.active.focus,
+.open > .dropdown-toggle.bt-item.has-child > .wrapper .toggle.focus {
+  color: #fff;
+  background-color: #398439;
+  border-color: #255625;
+}
+.bt-item.has-child > .wrapper .toggle:active,
+.bt-item.has-child > .wrapper .toggle.active,
+.open > .dropdown-toggle.bt-item.has-child > .wrapper .toggle {
   background-image: none;
 }
-.bt-item.has-child > .wrapper .toggle.disabled,
-.bt-item.has-child > .wrapper .toggle[disabled],
-fieldset[disabled] .bt-item.has-child > .wrapper .toggle,
 .bt-item.has-child > .wrapper .toggle.disabled:hover,
 .bt-item.has-child > .wrapper .toggle[disabled]:hover,
 fieldset[disabled] .bt-item.has-child > .wrapper .toggle:hover,
@@ -152,19 +182,13 @@ fieldset[disabled] .bt-item.has-child > .wrapper .toggle:hover,
 fieldset[disabled] .bt-item.has-child > .wrapper .toggle:focus,
 .bt-item.has-child > .wrapper .toggle.disabled.focus,
 .bt-item.has-child > .wrapper .toggle[disabled].focus,
-fieldset[disabled] .bt-item.has-child > .wrapper .toggle.focus,
-.bt-item.has-child > .wrapper .toggle.disabled:active,
-.bt-item.has-child > .wrapper .toggle[disabled]:active,
-fieldset[disabled] .bt-item.has-child > .wrapper .toggle:active,
-.bt-item.has-child > .wrapper .toggle.disabled.active,
-.bt-item.has-child > .wrapper .toggle[disabled].active,
-fieldset[disabled] .bt-item.has-child > .wrapper .toggle.active {
+fieldset[disabled] .bt-item.has-child > .wrapper .toggle.focus {
   background-color: #5cb85c;
   border-color: #4cae4c;
 }
 .bt-item.has-child > .wrapper .toggle .badge {
   color: #5cb85c;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 .bt-item.has-child > .wrapper .toggle span:before {
   content: "\e258";
